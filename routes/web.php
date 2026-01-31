@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\futlonger;
+use App\Http\Controllers\PokemonController1;
+use App\Http\Controllers\PokemonController2;
+use App\Http\Controllers\PokemonController3;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,3 +19,8 @@ Route::get('/link2', function () {
 });
 
 Route::get('/link3', [futlonger::class, 'index']);
+
+Route::get('/pokemon1', [PokemonController1::class, 'index']);
+Route::get('/pokemon2', [PokemonController2::class, 'index']);
+Route::get('/pokemon3', [PokemonController3 ::class, 'index']);
+
